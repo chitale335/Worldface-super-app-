@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0a1024" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="WorldFace" />
+    <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+
+    <!-- iOS splash screens -->
+    <link rel="apple-touch-startup-image" href="/splash/splash-default.png" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1170x2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1284x2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1536x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" />
+    <title>WorldFace — Connect Globally</title>
+    <meta name="description" content="WorldFace is a global social network. Connect with people, share your story, and message in real-time.">
+    <meta name="author" content="WorldFace" />
+
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c7b9154-aa46-45de-a0f9-c4924c5c85ca/id-preview-744fe58d--302001c2-5c64-4179-858a-40f0b92ef74d.lovable.app-1775734007059.png">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c7b9154-aa46-45de-a0f9-c4924c5c85ca/id-preview-744fe58d--302001c2-5c64-4179-858a-40f0b92ef74d.lovable.app-1775734007059.png">
+    <meta property="og:title" content="WorldFace — Connect Globally">
+  <meta name="twitter:title" content="WorldFace — Connect Globally">
+  <meta property="og:description" content="WorldFace is a global social network. Connect with people, share your story, and message in real-time.">
+  <meta name="twitter:description" content="WorldFace is a global social network. Connect with people, share your story, and message in real-time.">
+  <link rel="icon" href="/favicon.png" type="image/png">
+</head>
+
+  <body>
+    <div id="root"></div>
+    <div id="gt_drag_wrapper" style="position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(15,23,42,0.9);padding:6px 10px;border-radius:10px;backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,0.4);display:flex;align-items:center;gap:8px;cursor:grab;user-select:none;touch-action:none;">
+      <span id="gt_drag_handle" style="color:#fff;font-size:14px;line-height:1;padding:0 4px;cursor:grab;">⋮⋮</span>
+      <div id="google_translate_element"></div>
+    </div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'sw',
+          includedLanguages: 'en,sw,fr,ar,yo,so,hi,pt,es,zh-CN,de,ru,tr,it,ja,ko',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+      (function() {
+        const wrap = document.getElementById('gt_drag_wrapper');
+        let dragging = false, moved = false, sx = 0, sy = 0, ox = 0, oy = 0;
+        const saved = localStorage.getItem('gt_pos');
+        if (saved) {
+          try {
+            const p = JSON.parse(saved);
+            wrap.style.left = p.x + 'px';
+            wrap.style.top = p.y + 'px';
+            wrap.style.transform = 'none';
+          } catch (e) {}
+        }
+        const start = (x, y) => {
+          dragging = true; moved = false;
+          const r = wrap.getBoundingClientRect();
+          ox = r.left; oy = r.top; sx = x; sy = y;
+          wrap.style.transform = 'none';
+          wrap.style.cursor = 'grabbing';
+        };
+        const move = (x, y) => {
+          if (!dragging) return;
+          moved = true;
+          let nx = ox + (x - sx), ny = oy + (y - sy);
+          nx = Math.max(0, Math.min(window.innerWidth - wrap.offsetWidth, nx));
+          ny = Math.max(0, Math.min(window.innerHeight - wrap.offsetHeight, ny));
+          wrap.style.left = nx + 'px';
+          wrap.style.top = ny + 'px';
+        };
+        const end = () => {
+          if (!dragging) return;
+          dragging = false;
+          wrap.style.cursor = 'grab';
+          if (moved) localStorage.setItem('gt_pos', JSON.stringify({ x: parseFloat(wrap.style.left), y: parseFloat(wrap.style.top) }));
+        };
+        wrap.addEventListener('mousedown', e => { if (e.target.closest('select, .goog-te-combo')) return; start(e.clientX, e.clientY); e.preventDefault(); });
+        window.addEventListener('mousemove', e => move(e.clientX, e.clientY));
+        window.addEventListener('mouseup', end);
+        wrap.addEventListener('touchstart', e => { if (e.target.closest('select, .goog-te-combo')) return; const t = e.touches[0]; start(t.clientX, t.clientY); }, { passive: true });
+        window.addEventListener('touchmove', e => { const t = e.touches[0]; move(t.clientX, t.clientY); }, { passive: true });
+        window.addEventListener('touchend', end);
+      })();
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
