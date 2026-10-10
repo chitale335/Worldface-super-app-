@@ -1,0 +1,27 @@
+{
+  "name": "WorldFace — Connect Globally",
+  "short_name": "WorldFace",
+  "description": "WorldFace is a global social super app: feed, chat, calls, wallet, music, marketplace and AI.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a1024",
+  "theme_color": "#0a1024",
+  "lang": "sw",
+  "dir": "ltr",
+  "categories": ["social", "communication", "entertainment"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "/icons/icon-64.png", "sizes": "64x64", "type": "image/png" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Inbox", "url": "/messages", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Create post", "url": "/create", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Go live", "url": "/live", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Wallet", "url": "/wallet", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
