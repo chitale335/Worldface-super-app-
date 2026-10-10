@@ -1,0 +1,145 @@
+export const WorldFaceEngine = {
+  mode: "production",
+  modules: [
+    "social",
+    "ai_feed",
+    "wallet",
+    "marketplace",
+    "groups",
+    "security",
+    "health_support",
+    "mental_health"
+  ]
+};firebase init
+firebase deployexport function aiAutoAction(post) {
+  if (post.likes > 1000) return "BOOST_POST";
+  if (post.flags > 5) return "REVIEW_CONTENT";
+  return "NORMAL";
+}export function securityCheck(user) {
+  return {
+    otp: true,
+    fraudRisk: "LOW",
+    status: "SAFE"
+  };
+}export const Wallet = {
+  deposit(amount) {},
+  withdraw(amount) {}
+};function openEngine(request) {
+  if (request.type === "website") return renderWebsite(request);
+  if (request.type === "app") return launchMiniApp(request);
+  if (request.type === "search") return globalSearch(request);
+}function globalSearch(query) {
+  return {
+    users: searchUsers(query),
+    posts: searchPosts(query),
+    products: searchProducts(query),
+    apps: searchApps(query),
+    web: searchWebIndex(query)
+  };
+}{
+  "site_id": "w_001",
+  "owner_id": "u_001",
+  "type": "profile | business | store | portfolio",
+  "title": "King Misori Page",
+  "theme": "modern_dark",
+  "components": [
+    { "type": "hero", "text": "Welcome" },
+    { "type": "posts_feed" },
+    { "type": "products" }
+  ],
+  "custom_domain": "king.nexaface.com"
+}{
+  "gift_id": "g_001",
+  "from": "u_001",
+  "to": "u_002",
+  "type": "rose | crown | diamond",
+  "coins_value": 100
+}{
+  "event_id": "e_001",
+  "title": "Live Concert",
+  "host": "u_001",
+  "type": "virtual | physical",
+  "tickets": 1000,
+  "revenue": 0
+}{
+  "log_id": "s_001",
+  "user_id": "u_001",
+  "event": "login | payment | transfer",
+  "risk_level": "low | high",
+  "flagged": false
+}{
+  "ticket_id": "t_001",
+  "user_id": "u_001",
+  "issue": "wallet problem",
+  "status": "open | solved",
+  "ai_response": ""
+}{
+  "user_id": "u_001",
+  "activity_score": 90,
+  "spending": 5000,
+  "engagement": 75,
+  "viral_posts": 3
+}{
+  "app_id": "a_001",
+  "name": "Food Express",
+  "developer": "u_001",
+  "ui_json": {},
+  "permissions": ["wallet", "profile"],
+  "rating": 4.5,
+  "downloads": 1000
+}{
+  "user_id": "u_001",
+  "interests": ["food", "finance"],
+  "behavior_score": 80,
+  "recommendations": ["app_001", "post_002"],
+  "health_flags": []
+}{
+  "user_id": "u_001",
+  "symptoms": [],
+  "alerts": [],
+  "fitness_score": 75,
+  "diet_plan": "balanced"
+}{
+  "user_id": "u_001",
+  "name": "King Misori",
+  "email": "",
+  "phone": "",
+  "balance": 0,
+  "coins": 0,
+  "verified": false,
+  "reputation_score": 0,
+  "created_at": "timestamp"
+}{
+  "wallet_id": "w_001",
+  "user_id": "u_001",
+  "balance": 5000,
+  "locked_balance": 0,
+  "transactions": []
+}{
+  "post_id": "p_001",
+  "user_id": "u_001",
+  "type": "post | reel | anonymous",
+  "content": "Hello NexaFace",
+  "likes": 0,
+  "comments": [],
+  "shares": 0,
+  "ai_score": 0
+}{
+  "account_id": "b_001",
+  "user_id": "u_001",
+  "savings": 10000,
+  "vault": {
+    "locked": 5000,
+    "interest_rate": 5
+  },
+  "loans": [],
+  "credit_score": 720
+}{
+  "product_id": "m_001",
+  "seller_id": "u_001",
+  "name": "Shoes",
+  "price": 3000,
+  "type": "physical | digital | service",
+  "stock": 10,
+  "escrow_status": "active"
+}CdV155T7pSyGqPurln9G0HLqMnlqjKLRwFLSLlyuVtGOKXnTW0HTZAXTMTkdG3oIoHeaUQU1kci00Ra2HkPBGGYgCblzk25g7Atfn1FkrICvTyd9xICRSYxfd9Zn7gPVPiP3zE+Arfe72FSCMoA6m7+ktmEo29c8M8+7xGhxArIo1rdUTPFIV39iLWy5tRnhzdduhbTMnCsEJaEb+7h0y2UUsMqPfKN3OaMIw9ZnpAk8xU18pXEc1AAfN2dlfzislaI9PhAq4F3nn/LfTaVFGuhrqNzW7mZzfFS8kkzl1NhyOBHJMwHKhpjzz08P3o5ojEPmc7qlNsIv0jMjrIiQCQ==XsqM8uBR5vZ3JQfvwvPsx/j6aZUIctHWfJSCAi3mRt86O4CDUK+Uygel0G0/MgLlR1CpuTQ8zjU/h/sTWyDB9bd7hYpB5AWn6ppFB6fYsVwUFFjy9B+aI+TmgnanraiPxxv0inLnZL6DFVioUXLCe0kHR122/U1A/zb7DQPKoYME95peAiEAZYYPpkKFlBN0XhlaLgN/hMripMMXhZFHXSExnA7Yq0lDQm7QCdVel04mr0sMyft6VPR91WhnmP3Oai1syxSc6D8tdCyCWup2HOtB4/eD47e8JACaSX3mvySDAkaqd6RzzzYx+ZAWmJU23L31tFuGk46p0qwOuniX5A==J2fzkBd0DR0XsoGbojUBXtDb93ivdXrXTwectFkLAz1GhWGPMaiTUmJ79XO1e0wWi9wFKdPbwM4C1g0RbOfS6PdAMJf6F2zEr4nPGMzBld3HmQTN
