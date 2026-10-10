@@ -1,0 +1,40 @@
+# KOTEKULE — WorldFace Super App
+
+> KOTEKULE is the center of the WorldFace (NexaFace) ecosystem: one account connecting a
+> social feed, real-time chat and video calls, the NexaPay wallet and creator payouts,
+> music, marketplace, app store, ads manager, CulturalVerse heritage platform and the
+> WorldFace AI Core. Built by Samwel Misori (King Misori). Languages: Swahili and English.
+> Installable PWA with offline support and push notifications.
+
+## Core pages
+- [KOTEKULE hub](https://worldface-kotekule.lovable.app/kotekule): directory of every WorldFace app.
+- [Feed](https://worldface-kotekule.lovable.app/): posts, reels and stories.
+- [Explore](https://worldface-kotekule.lovable.app/explore): people, hashtags and trending content.
+- [Communities](https://worldface-kotekule.lovable.app/communities): public, private and secret groups.
+- [CulturalVerse](https://worldface-kotekule.lovable.app/culturalverse): cultural map, museums, recipes, heritage music, fashion.
+- [Inbox](https://worldface-kotekule.lovable.app/messages): real-time chat, voice and video calls.
+- [Live](https://worldface-kotekule.lovable.app/live): livestreaming with gifts.
+
+## Money
+- [NexaPay Wallet](https://worldface-kotekule.lovable.app/wallet): balance, payments, mobile money.
+- [Payouts](https://worldface-kotekule.lovable.app/payouts): creator payout methods, OTP verification, revenue analytics. Currencies: KES, USD, EUR, GBP, TZS, UGX, NGN, ZAR.
+- [Rewards](https://worldface-kotekule.lovable.app/rewards): coins and daily rewards.
+
+## AI
+- [NexaAI](https://worldface-kotekule.lovable.app/ai): AI Core across 8 modules (core, feed, chat, pay, studio, search, ads, care).
+- [AI Assistant](https://worldface-kotekule.lovable.app/assistant): voice assistant with speech-to-text, text-to-speech and saved history.
+- Consent model: the AI has no control until the user grants a scope (memory, feed, chat, wallet, studio, ads, care, personalized ads). It proposes actions; the user approves them. It never sends money or publishes on its own.
+
+## Creator & commerce
+- [Studio](https://worldface-kotekule.lovable.app/studio): AI video, images and thumbnails.
+- [Music](https://worldface-kotekule.lovable.app/music): artists, songs, lyrics.
+- [AppStore](https://worldface-kotekule.lovable.app/appstore): in-app apps and APKs with reviews.
+- [Marketplace](https://worldface-kotekule.lovable.app/marketplace): listings with buyer-seller chat.
+- [Ads Manager](https://worldface-kotekule.lovable.app/ads): AI-estimated CPM, budget, reach; ads run only inside the app.
+
+## Knowledge
+- [News](https://worldface-kotekule.lovable.app/news)
+- [Blog](https://worldface-kotekule.lovable.app/blog)
+- [Founder — King Misori](https://worldface-kotekule.lovable.app/founder)
+- [Terms](https://worldface-kotekule.lovable.app/terms)
+- [Privacy](https://worldface-kotekule.lovable.app/privacy)

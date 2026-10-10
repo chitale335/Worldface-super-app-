@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790899100887,
+      "tag": "0000_tighten_settings_and_group_members",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790987601351,
+      "tag": "0001_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791073129583,
+      "tag": "0002_marketplace_orders_referrals_devtools",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791292576398,
+      "tag": "0003_marketplace_escrow",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791292739017,
+      "tag": "0004_product_reviews",
+      "breakpoints": true
+    }
+  ]
+}
